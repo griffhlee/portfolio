@@ -1,0 +1,301 @@
+/* Ensure the canvas takes up the entire screen */
+canvas {
+    display: block;
+    background-color: white; /* Optional: Set a background color */
+}
+
+/* Basic reset */
+body, ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+/* Ensure body has no margin or padding */
+body {
+    margin: 0;
+    font-family: Helvetica, sans-serif;
+}
+
+/* Header styles */
+.header {
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+    padding: 20px 0px;
+}
+
+/* Header menu styles */
+.header ul {
+    margin: 0;
+    padding: 0; /* Remove padding */
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* Logo styles */
+.header .logo {
+    display: block;
+    float: left;
+    font-size: 2em;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+/* Menu styles */
+.header .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+}
+
+/* Menu icon styles */
+.header .menu-icon {
+    cursor: pointer;
+    padding: 28px 20px;
+    position: relative;
+    user-select: none;
+    float: right;
+}
+
+.header .menu-icon .navicon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+}
+
+.header .menu-icon .navicon:before,
+.header .menu-icon .navicon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+}
+
+.header .menu-icon .navicon:before {
+    top: 5px;
+}
+
+.header .menu-icon .navicon:after {
+    top: -5px;
+}
+
+/* Menu button styles */
+.header .menu-btn {
+    display: none;
+}
+
+.header .menu-btn:checked ~ .menu {
+    max-height: 240px;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon {
+    background: transparent;
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:before {
+    transform: rotate(-45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon .navicon:after {
+    transform: rotate(45deg);
+}
+
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+.header .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+    top: 0;
+}
+
+/* Responsive adjustments for larger screens */
+@media (min-width: 48em) {
+    .header li {
+        float: left;
+    }
+    .header li a {
+        padding: 20px 30px;
+    }
+    .header .menu {
+        clear: none;
+        float: right;
+        max-height: none;
+    }
+    .header .menu-icon {
+        display: none;
+    }
+}
+
+
+.nav-list {
+    display: flex;
+    flex-direction: row; /* Default layout for large screens */
+    justify-content: right;
+    padding: 0;
+    color: #333;
+    text-transform: uppercase;
+}
+
+.nav-item a {
+    display: block;
+    padding: 10px 20px;
+    color: black;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+.nav-item a:hover {
+    color: red;
+}
+
+/* Dropdown Menu */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff; /* White background for dropdown */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+/* Dropdown Items */
+.dropdown-content a {
+    padding: 8px 15px; /* Adjust padding for spacing */
+    color: #000000; /* Black text for dropdown items */
+    text-decoration: none;
+    display: block; /* Ensure items are block elements */
+}
+
+/* Show dropdown on hover */
+.nav-item:hover .dropdown-content {
+    display: block;
+}
+
+/* Main content area */
+main {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 100px 20px 20px;
+    background-color: #fff;
+}
+
+.entry {
+    page-break-after: always; /* Forces a page break after each entry when printing */
+}
+
+.entry-separator {
+    border: none; /* Remove the default border */
+    border-top: 1px solid black; /* Add a thin black line */
+    margin: 20px auto; /* Space above and below the line */
+    width: 100%; /* Ensure the line spans the full width of the section */
+    max-width: 500px; /* Match the width of the section */
+}
+
+/* Sections */
+section {
+    width: 100%; /* Takes up the full width of its container */
+    max-width: 500px; /* Limit the width of the content */
+    margin: 0 auto 10px auto; /* Center the section and add bottom margin */
+    line-height: 1.8;
+    text-align: left;
+    padding: 20px; /* Optional: Padding inside each entry */
+    border-radius: 8px; /* Optional: Rounded corners */
+}
+
+.journal-entry p {
+    color: grey; /* Change the text color of paragraphs within journal entries to gray */
+}
+
+section img {
+    display: block;
+    margin: 20px auto; /* Center images */
+    max-width: 100%;
+}
+
+.video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+video {
+    width: 100%;
+    height: auto;
+    border: 2px solid #000;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    text-align: center;
+    border-top: 1px solid #ddd;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    margin: 0 15px; /* Spacing between icons */
+}
+
+.social-icon img {
+    width: 30px; /* Adjust the size of the icons */
+    height: auto;
+    transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.social-icon img:hover {
+    transform: scale(1.2); /* Slightly enlarge the icon on hover */
+}
+
+/* General link styles */
+a {
+    color: inherit; /* Inherit the color from the parent element */
+    text-decoration: none; /* Remove the underline by default */
+}
+
+/* Visited link styles */
+a:visited {
+    color: inherit; /* Keep the same color as non-visited links */
+    text-decoration: none; /* Keep the same decoration as non-visited links */
+}
+
+/* Hover state for links */
+a:hover {
+    color: red; /* Optionally, change color on hover */
+}
+
+/* Active link state */
+a:active {
+    color: inherit; /* Keep the color unchanged when clicked */
+    text-decoration: none; /* Keep the same decoration when clicked */
+}
+
+.read-more {
+    display: inline-block;
+    padding: 5px 10px; /* Adjust padding as needed */
+    border: 2px solid #000; /* Border around the link */
+    text-decoration:wavy;
+    color: #000; /* Text color */
+    background-color: white; /* Background color of the border box */
+    border-radius: 3px;
+}
+
+.read-more:hover {
+    background-color: black; /* Background color on hover */
+    color:white; /* Text color on hover */
+}
+

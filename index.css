@@ -317,3 +317,13 @@ a:active {
 .record:hover {
     transform: rotate(360deg); /* Spin the image 360 degrees on hover */
 }
+
+* {
+    box-sizing: border-box;
+  }
+
+  @media (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}

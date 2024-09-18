@@ -219,7 +219,6 @@ section img {
     display: block;
     margin: 20px auto; /* Center images */
     max-width: 100%;
-    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
 /* Container for the image */
@@ -262,10 +261,6 @@ section img {
     opacity: 1;
 }
 
-
-section img:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
-}
 
 .video-container {
     display: flex;
@@ -358,7 +353,7 @@ a:active {
   
   h1 {
     font-size: 50px;
-    word-break: break-all;
+    word-break: normal;
   }
   
   .row {

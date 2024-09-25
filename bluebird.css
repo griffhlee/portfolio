@@ -326,6 +326,12 @@ a:active {
     font-size: 50px;
     word-break: break-all;
   }
+
+  h3 {
+    font-size: 15px;
+    word-break: break-all;
+    color: white;
+  }
   
   .row {
     margin: 8px -16px;

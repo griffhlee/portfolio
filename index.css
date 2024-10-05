@@ -196,6 +196,7 @@ main {
     background-color: #fff;
 }
 
+
 .entry {
     page-break-after: always; /* Forces a page break after each entry when printing */
 }

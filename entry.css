@@ -319,7 +319,7 @@ a:active {
   
   h1 {
     font-size: 45px;
-    word-break: break-all;
+    word-break:keep-all;
   }
   
   .row {
@@ -373,4 +373,34 @@ a:active {
 
 .record:hover {
     transform: rotate(360deg); /* Spin the image 360 degrees on hover */
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* Space between the images */
+    max-width: 1000px; /* Set a maximum width for the gallery */
+    margin: 0 auto; /* Center the gallery */
+    padding: 20px;
+}
+
+/* Each gallery item */
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* Hide any overflow from images */
+}
+
+/* Image styling */
+.gallery-item img {
+    width: 100%; /* Ensure images take up full width */
+    height: auto; /* Maintain the natural aspect ratio */
+    display: block;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Stack images on smaller screens */
+    }
 }

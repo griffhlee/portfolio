@@ -21,7 +21,6 @@ body {
     width: 100%;
     z-index: 3;
     padding: 20px 0px;
-    border-bottom: 5px solid #dbc8b1;
 }
 
 /* Header menu styles */
@@ -183,7 +182,7 @@ main {
     align-items: center;
     width: 100%;
     padding: 150px 10px 20px;
-    background-color: #152b89;
+    background-color: #d15038;
 }
 
 .entry {
@@ -248,7 +247,6 @@ video {
 footer {
     padding: 20px;
     text-align: center;
-    border-top: 5px solid #dbc8b1;
 }
 
 .footer-content {

@@ -212,6 +212,11 @@ section {
     color: grey; /* Change the text color of paragraphs within journal entries to gray */
 }
 
+.music-entry p {
+    color: grey; /* Change the text color of paragraphs within journal entries to gray */
+    line-height: 0.75;
+}
+
 .journal-entry h2 {
     color: black;
 }

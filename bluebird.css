@@ -220,12 +220,8 @@ section img {
     display: block;
     margin: 20px auto; /* Center images */
     max-width: 100%;
-    transition: transform 0.3s ease; /* Smooth hover effect */
 }
 
-section img:hover {
-    transform: scale(1.1); /* Slightly enlarge the icon on hover */
-}
 
 .video-container {
     display: flex;
@@ -376,3 +372,32 @@ a:active {
     }
   }
   
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 10px; /* Space between the images */
+    max-width: 1000px; /* Set a maximum width for the gallery */
+    margin: 0 auto; /* Center the gallery */
+    padding: 20px;
+}
+
+/* Each gallery item */
+.gallery-item {
+    position: relative;
+    overflow: hidden; /* Hide any overflow from images */
+}
+
+/* Image styling */
+.gallery-item img {
+    width: 100%; /* Ensure images take up full width */
+    height: auto; /* Maintain the natural aspect ratio */
+    display: block;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .gallery {
+        grid-template-columns: 1fr; /* Stack images on smaller screens */
+    }
+}

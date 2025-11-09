@@ -214,7 +214,7 @@ section {
 
 .music-entry p {
     color: grey; /* Change the text color of paragraphs within journal entries to gray */
-    line-height: 0.75;
+    line-height: 1;
 }
 
 .journal-entry h2 {
